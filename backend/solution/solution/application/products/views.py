@@ -1,3 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .viewProducts.viewLogUpdateProduct import *
+from .viewProducts.viewLogSeeProduct import *
+from .viewProducts.viewBrand import *
+from .viewProducts.viewProduct import *

@@ -37,6 +37,7 @@
     <Compile Include="application\notifications\migrations\__init__.py" />
     <Compile Include="application\notifications\models.py" />
     <Compile Include="application\notifications\tests.py" />
+    <Compile Include="application\notifications\urls.py" />
     <Compile Include="application\notifications\views.py" />
     <Compile Include="application\notifications\__init__.py" />
     <Compile Include="application\products\admin.py" />
@@ -44,14 +45,25 @@
     <Compile Include="application\products\migrations\__init__.py" />
     <Compile Include="application\products\models.py" />
     <Compile Include="application\products\tests.py" />
+    <Compile Include="application\products\urls.py" />
     <Compile Include="application\products\views.py" />
     <Compile Include="application\products\__init__.py" />
     <Compile Include="application\users\admin.py" />
     <Compile Include="application\users\apps.py" />
     <Compile Include="application\users\migrations\__init__.py" />
     <Compile Include="application\users\models.py" />
+    <Compile Include="application\users\serializers.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="application\users\tests.py" />
+    <Compile Include="application\users\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="application\users\views.py" />
+    <Compile Include="application\users\views\userView.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\users\views\__init__.py" />
     <Compile Include="application\users\__init__.py" />
     <Compile Include="app\forms.py" />
     <Compile Include="app\models.py" />
@@ -86,6 +98,7 @@
     <Folder Include="application\products\templates\products\" />
     <Folder Include="application\users\" />
     <Folder Include="application\users\migrations\" />
+    <Folder Include="application\users\views\" />
     <Folder Include="application\users\templates\" />
     <Folder Include="application\users\templates\users\" />
     <Folder Include="app\" />
