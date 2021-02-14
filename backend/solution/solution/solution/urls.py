@@ -11,5 +11,6 @@ from app import forms, views
 
 urlpatterns = [   
     path('admin/', admin.site.urls),
-    re_path('',include('application.users.urls')),    
+    re_path('',include('application.users.urls')),
+    re_path('',include('application.products.urls')),
 ]
