@@ -25,3 +25,9 @@ Repository to handle the code from a technical test to develop the backend and r
 	* run the migration: "python manage.py migrate"
 	* crate the superuser: "python manage.py createsuperuser"
 	* start the server: "python manage.py runserver --settings=solution.settings.local"
+	
+#solve swagger know issue
+It's a bug in the developer's code, 
+in site-packages/rest_framework_swagger/templates/rest_framework_swagger/index.html
+The line with {% load staticfiles %} (line 2) should be {% load static %}. 
+Edit it manually
