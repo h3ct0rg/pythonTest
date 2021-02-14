@@ -13,4 +13,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     re_path('',include('application.users.urls')),
     re_path('',include('application.products.urls')),
+    re_path('',include('application.notifications.urls'))
 ]
