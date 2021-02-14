@@ -44,8 +44,36 @@
     <Compile Include="application\products\apps.py" />
     <Compile Include="application\products\migrations\__init__.py" />
     <Compile Include="application\products\models.py" />
+    <Compile Include="application\products\serializerProducts\serializerBrands.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\products\serializerProducts\serializerLogSeeProduct.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\products\serializerProducts\serializerLogUpdateProduct.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\products\serializerProducts\serializerProducts.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\products\serializers.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="application\products\tests.py" />
     <Compile Include="application\products\urls.py" />
+    <Compile Include="application\products\viewProducts\viewBrand.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\products\viewProducts\viewLogSeeProduct.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\products\viewProducts\viewLogUpdateProduct.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\products\viewProducts\viewProduct.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="application\products\viewProducts\__init__.py" />
     <Compile Include="application\products\views.py" />
     <Compile Include="application\products\__init__.py" />
     <Compile Include="application\users\admin.py" />
@@ -94,6 +122,8 @@
     <Folder Include="application\notifications\templates\notifications\" />
     <Folder Include="application\products\" />
     <Folder Include="application\products\migrations\" />
+    <Folder Include="application\products\viewProducts\" />
+    <Folder Include="application\products\serializerProducts\" />
     <Folder Include="application\products\templates\" />
     <Folder Include="application\products\templates\products\" />
     <Folder Include="application\users\" />
