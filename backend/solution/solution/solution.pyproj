@@ -4,6 +4,8 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <Name>solution</Name>
     <RootNamespace>solution</RootNamespace>
+    <TestFramework>Pytest</TestFramework>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -30,6 +32,27 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="application\notifications\admin.py" />
+    <Compile Include="application\notifications\apps.py" />
+    <Compile Include="application\notifications\migrations\__init__.py" />
+    <Compile Include="application\notifications\models.py" />
+    <Compile Include="application\notifications\tests.py" />
+    <Compile Include="application\notifications\views.py" />
+    <Compile Include="application\notifications\__init__.py" />
+    <Compile Include="application\products\admin.py" />
+    <Compile Include="application\products\apps.py" />
+    <Compile Include="application\products\migrations\__init__.py" />
+    <Compile Include="application\products\models.py" />
+    <Compile Include="application\products\tests.py" />
+    <Compile Include="application\products\views.py" />
+    <Compile Include="application\products\__init__.py" />
+    <Compile Include="application\users\admin.py" />
+    <Compile Include="application\users\apps.py" />
+    <Compile Include="application\users\migrations\__init__.py" />
+    <Compile Include="application\users\models.py" />
+    <Compile Include="application\users\tests.py" />
+    <Compile Include="application\users\views.py" />
+    <Compile Include="application\users\__init__.py" />
     <Compile Include="app\forms.py" />
     <Compile Include="app\models.py" />
     <Compile Include="app\tests.py" />
@@ -37,12 +60,34 @@
     <Compile Include="app\__init__.py" />
     <Compile Include="app\migrations\__init__.py" />
     <Compile Include="manage.py" />
+    <Compile Include="solution\settings\base.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="solution\settings\local.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="solution\settings\prod.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="solution\settings\__init__.py" />
     <Compile Include="solution\__init__.py" />
     <Compile Include="solution\settings.py" />
     <Compile Include="solution\urls.py" />
     <Compile Include="solution\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="application\notifications\" />
+    <Folder Include="application\notifications\migrations\" />
+    <Folder Include="application\notifications\templates\" />
+    <Folder Include="application\notifications\templates\notifications\" />
+    <Folder Include="application\products\" />
+    <Folder Include="application\products\migrations\" />
+    <Folder Include="application\products\templates\" />
+    <Folder Include="application\products\templates\products\" />
+    <Folder Include="application\users\" />
+    <Folder Include="application\users\migrations\" />
+    <Folder Include="application\users\templates\" />
+    <Folder Include="application\users\templates\users\" />
     <Folder Include="app\" />
     <Folder Include="app\migrations\" />
     <Folder Include="app\static\" />
@@ -52,9 +97,14 @@
     <Folder Include="app\static\app\scripts\" />
     <Folder Include="app\templates\" />
     <Folder Include="app\templates\app\" />
+    <Folder Include="application\" />
     <Folder Include="solution\" />
+    <Folder Include="solution\settings\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="application\notifications\templates\notifications\index.html" />
+    <Content Include="application\products\templates\products\index.html" />
+    <Content Include="application\users\templates\users\index.html" />
     <Content Include="requirements.txt" />
     <Content Include="db.sqlite3" />
     <Content Include="app\static\app\content\bootstrap.css" />
@@ -90,6 +140,17 @@
     <None Include="readme.html">
       <SubType>WebBrowser</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.7</Version>
+      <Description>env (Python 3.7 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 
